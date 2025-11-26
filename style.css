@@ -1,0 +1,131 @@
+:root {
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#7c3aed;
+  --muted:#9aa4b2;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;
+  background:linear-gradient(180deg,var(--bg),#071028);
+  color:#e6eef8;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  min-height:100vh;
+}
+
+.card{
+  width:min(720px,100%);
+  background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));
+  border-radius:16px;
+  padding:24px;
+  box-shadow:0 10px 30px rgba(2,6,23,0.6);
+  border:1px solid rgba(255,255,255,0.03);
+}
+
+h1{
+  margin:0 0 12px;
+  font-size:22px;
+  letter-spacing:-0.2px;
+}
+
+p.lead{
+  margin:0 0 18px;
+  color:var(--muted);
+}
+
+.ai-box{
+  background:rgba(255,255,255,0.02);
+  padding:18px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.015);
+}
+
+.loader{
+  height:10px;
+  background:rgba(255,255,255,0.03);
+  border-radius:999px;
+  overflow:hidden;
+  margin-top:12px;
+}
+
+.loader > i{
+  display:block;
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,transparent,rgba(124,58,237,0.9),transparent);
+  animation:slide 2s linear forwards;
+}
+
+@keyframes slide{
+  to{ width:100%; }
+}
+
+.btn{
+  display:inline-block;
+  margin-top:18px;
+  padding:12px 18px;
+  border-radius:12px;
+  background:linear-gradient(90deg,var(--accent),#5b21b6);
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+  font-size:16px;
+}
+
+.small{
+  font-size:14px;
+  color:var(--muted);
+  margin-top:12px;
+}
+
+footer{
+  margin-top:14px;
+  font-size:12px;
+  color:rgba(255,255,255,0.18);
+}
+
+/* ────────────────────────────────────────────
+   📱 Mobile Responsive
+────────────────────────────────────────────── */
+@media (max-width: 480px) {
+
+  h1{
+    font-size:19px;
+  }
+
+  p.lead{
+    font-size:14px;
+  }
+
+  .card{
+    padding:18px;
+    border-radius:14px;
+  }
+
+  .ai-box{
+    padding:16px;
+  }
+
+  .btn{
+    width:100%;
+    text-align:center;
+    font-size:17px;
+    padding:14px;
+  }
+
+  .loader{
+    height:8px;
+  }
+
+  .small{
+    font-size:13px;
+  }
+}
